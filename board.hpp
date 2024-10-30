@@ -1,6 +1,9 @@
 #pragma once
 
 #include <iostream>
+#include <string>
+
+#include "point.hpp"
 
 class Board {
    int _width;
@@ -10,6 +13,8 @@ public:
    Board(const Board& other);
    int GetWidth() const;
    int GetHeight() const;
+   Point GetRandomPosition() const;
+   std::string GetInfo() const;
 
    Board operator = (const Board& other);
    bool operator == (const Board& other) const;
